@@ -12,7 +12,7 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen)
   }
   const navItems = [
-    { title: "Jewelry & Accessories", path: "/" },
+    { title: "Jewellery and Accessories", path: "/" },
     { title: "Clothing & shoes", path: "/" },
     { title: "Home & Living", path: "/" },
     { title: "Toys & Entainment", path: "/" },
@@ -20,15 +20,18 @@ const Navbar = () => {
   ];
   return (
     <>
-     {/* <a href="/" className=" bg-white W-[100px]">
-            <img alt="logo-fashion" src="/assets/logo.png" />
-          </a> */}
+     
       <header className="max-w-screen-2xl xL:px:28 px-4 absolute top-0 right-0 left-0">
         <nav className="flex justify-between items-center container md:py-4 pt-6 pb-3">
-          <FaSearch className="text-black w-5 h-5 cursor-pointer hidden md:block" />
-          <h1 className="font-bold text-2xl mx-auto ">SHOPPERS STOP</h1>
+         
+          <h1 className="font-bold text-2xl ml-15 sm:text-3xl ">SHOPPERS STOP</h1>
+          
+         
          
           <div className="text-lg text-black sm:flex items-center gap-4 hidden">
+          <input type="text" placeholder="search" className="w-[150px] text-black  sm:w-[100px] hover:w-[200px] transition-all duration-300 rounded-full border border-grey-300 px-2 py-1 focus:outline-none focus:border-1"/>
+          <FaSearch className="text-black w-5 h-5 cursor-pointer hidden md:block" />
+
             <a href="/" className="flex items-center gap-2">
               <FaUser />
               Account
