@@ -2,6 +2,7 @@ import React from 'react'
 import Banner from './Banner';
 import Jewellery from './Jewellery';
 import Product from './Product';
+import Mobile from './Mobile';
 
 
 function Home() {
@@ -10,6 +11,7 @@ function Home() {
       <Banner/>
       <Jewellery/>
       <Product/>
+      <Mobile/>
     </div>
   )
 }

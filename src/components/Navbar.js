@@ -18,7 +18,7 @@ const Navbar = () => {
     { title: "Mobile & Accesories", path: "/" },
     { title: "Bags & Footwear", path: "/" },
     { title: "Home & kitchen", path: "/" },
-    { title: "Beauty & Make up", path: "/" },
+    // { title: "Beauty & Make up", path: "/" },
    
    
   ];
@@ -32,7 +32,7 @@ const Navbar = () => {
           
          
          
-          <div className="text-lg text-black sm:flex items-center gap-4 hidden">
+          <div className="text-lg text-black sm:flex items-center gap-6 hidden">
           <input type="text" placeholder="search" className="w-[150px] text-black  sm:w-[100px] hover:w-[200px] transition-all duration-300 rounded-full border border-grey-300 px-2 py-1 focus:outline-none focus:border-1"/>
           <FaSearch className="text-black w-5 h-5 cursor-pointer hidden md:block" />
 
