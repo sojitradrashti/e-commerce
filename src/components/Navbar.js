@@ -13,11 +13,11 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen)
   }
   const navItems = [
-    { title: "Jewellery & Accesories ", path: "/" },
-    { title: "Men", path: "/" },
-    { title: "Mobile & Accesories", path: "/" },
-    { title: "Bags & Footwear", path: "/" },
-    { title: "Home & kitchen", path: "/" },
+    { title: "Home", path: "/" },
+    { title: "Store", path: "/" },
+    { title: "About Us", path: "/" },
+    { title: "Contact Us", path: "/" },
+    { title: "My Account", path: "/" },
     // { title: "Beauty & Make up", path: "/" },
    
    
@@ -26,14 +26,14 @@ const Navbar = () => {
     <>
      
       <header className="max-w-screen-2xl xL:px:28 px-4 z-10 bg-[#FAF9F8]  absolute top-0 right-0 left-0">
-        <nav className="flex justify-between items-center container md:py-4 pt-6 pb-3">
-        
-          <h1 className="font-bold text-2xl  sm:text-3xl ">SHOPPERS STOP</h1>
+        <nav className="flex items-center justify-between py-3 md:py-4 pt-6 pb-3">
+        <img src="/assets/logo.png" alt="logo"/>
+          <h1 className="font-bold text-2xl  sm:text-3xl ">SIMPLY NATURALS</h1>
           
          
          
           <div className="text-lg text-black sm:flex items-center gap-6 hidden">
-          <input type="text" placeholder="search" className="w-[150px] text-black  sm:w-[100px] hover:w-[200px] transition-all duration-300 rounded-full border border-grey-300 px-2 py-1 focus:outline-none focus:border-1"/>
+          <input type="text" placeholder="search" className="w-[3000px] text-black  sm:w-[100px] hover:w-[200px] transition-all duration-300 rounded-full border border-grey-300 px-2 py-1 focus:outline-none focus:border-1"/>
           <FaSearch className="text-black w-5 h-5 cursor-pointer hidden md:block" />
 
             <a href="/" className="flex items-center gap-2">
@@ -58,7 +58,7 @@ const Navbar = () => {
             </button>
           </div>
         </nav>
-        <hr />
+        <hr/>
       
         <div className="pt-4">
           <ul className="lg:flex items-center justify-between text-black text-xl  hidden ">
@@ -79,6 +79,7 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
+  
       </header>
     </>
   );
