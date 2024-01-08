@@ -13,12 +13,12 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen)
   }
   const navItems = [
-    { title: "Home", path: "/" },
-    { title: "Store", path: "/" },
-    { title: "About Us", path: "/" },
-    { title: "Contact Us", path: "/" },
-    { title: "My Account", path: "/" },
-    // { title: "Beauty & Make up", path: "/" },
+    { title: "Home", path: "/home" },
+    { title: "Store", path: "/store" },
+    { title: "About Us", path: "/aboutus" },
+    { title: "Contact Us", path: "/contactus" },
+    { title: "My Account", path: "/myaccount" },
+   
    
    
   ];
@@ -44,7 +44,7 @@ const Navbar = () => {
               <RiHeartFill />
             </a>
 
-            <a href="/" className="flex items-center gap-2">
+            <a href="/Cart" className="flex items-center gap-2">
               <FaShoppingCart />
              
             </a>

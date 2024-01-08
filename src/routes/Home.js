@@ -1,18 +1,27 @@
 import React from 'react'
-// import Banner from './Banner';
+import Banner from './Banner';
 
 import Plants from './Plants';
 import Product from './Product';
+import Help from './Help';
+import Testimonials from './Testimonials';
+import Shop from './Shop';
+import Footer from './Footer';
+import Navbar from '../components/Navbar';
 
 
 
 function Home() {
   return (
     <div>
-      {/* <Banner/> */}
+      <Navbar/>
+      <Banner/>
        <Product/>
       <Plants/>
-     
+     <Help/>
+     <Testimonials/>
+     <Shop/>
+     <Footer/>
      
     </div>
   )

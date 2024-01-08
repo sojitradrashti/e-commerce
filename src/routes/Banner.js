@@ -1,25 +1,26 @@
 import React from "react";
 import { FaShoppingBag } from "react-icons/fa";
 import Slider from "react-slick";
+import { Link } from "react-router-dom";
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
 const ImageList = [
   {
     id: 1,
-    img: "/assets/image2.jpg",
-    title: "Up to 30% off on jewellery ",
-    description:"lorem His Life will forever be Changed dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    img: "/assets/image1.png",
+    title: "Best house plants varieties ",
+    description:"Beautiful living greenery for homes and offices.",
   },
   {
     id: 2,
-    img: "/assets/image3.jpg",
-    title: "Supper Offer on All Products",
+    img: "/assets/image2.png",
+    title: "Beauty of Plants",
     description:"Who's there lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
   {
     id: 3,
-    img: "/assets/image1.jpg",
-    title: "Up to 70% off on all Product Sale",
+    img: "/assets/image3.png",
+    title: "Proper Care of Plants",
     description:"consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
   },
 ];
@@ -49,12 +50,14 @@ function Banner () {
                 <h1 className="text-4xl sm:text-6xl lg:text-5xl  ml-8 font-bold ">
                   {data.title}
                 </h1>
-                <p className="text-sm ml-8 ">{data.description}</p>
+                <p className="text-xl ml-8 ">{data.description}</p>
                 <div>
-                  {/* <button 
-                  className="bg-gradient-to-r from-primary to-secondary hover:scale-105 duration-200 text-white py-2 px-4 rounded-full">
-                    Order Now
-                  </button> */}
+                  <Link to="/Cart">
+                  <button 
+                  className="text-bold  ml-6 text-white bg-[#FC5F5F] hover:bg-[#75C32C] py-2 px-4 rounded-full">
+                    SHOP NOW
+                  </button>
+                  </Link>
                 </div>
               </div>
               <div className="order-1 sm:order-2 ">
@@ -70,6 +73,36 @@ function Banner () {
           </div>
         ))}
       </Slider>
+    </div>
+    <div className="px-10 mt-5  ">
+      <div className="flex flex-col sm:flex-row justify-between">
+        <div className="flex items-center">
+          <img src="/assets/logo1.png" alt="logo"/>
+         <div>
+          <h4 className="font-bold text-xl">Plants Collection</h4>
+          <p>Free shipping on order</p>
+          </div>
+        </div>
+        <div>
+        <div className="flex items-center">         
+             <img src="/assets/logo2.png" alt="logo"/>
+             <div>
+          <h4 className="font-bold text-xl">Free Shipping</h4>
+          <p>Any plants for your space</p>
+        </div>
+        </div>
+        </div>
+
+        <div>
+        <div className="flex items-center"> 
+          <img src="/assets/logo3.png" alt="logo"/>
+          <div>
+          <h4 className="font-bold text-xl">100% Money Back</h4>
+          <p>If the item didn't suit you</p>
+        </div>
+        </div>
+        </div>
+      </div>
     </div>
     </div>
     </>
