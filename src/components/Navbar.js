@@ -32,11 +32,11 @@ const Navbar = () => {
           
          
          
-          <div className="text-lg text-black sm:flex items-center gap-6 hidden">
+          <div className="text-lg text-black sm:flex items-center gap-6 hidden ">
           <input type="text" placeholder="search" className="w-[3000px] text-black  sm:w-[100px] hover:w-[200px] transition-all duration-300 rounded-full border border-grey-300 px-2 py-1 focus:outline-none focus:border-1"/>
           <FaSearch className="text-black w-5 h-5 cursor-pointer hidden md:block" />
 
-            <a href="/" className="flex items-center gap-2">
+            <a href="/" className="flex items-center  gap-2">
               <FaUser />
               </a>
 
@@ -44,9 +44,9 @@ const Navbar = () => {
               <RiHeartFill />
             </a>
 
-            <a href="/Cart" className="flex items-center gap-2">
+            <a href="/" className="flex items-center gap-2 outline-none relative">
               <FaShoppingCart />
-             
+             <div className={`absolute top-2 right-0 bg-white text-slate-900 shadow shadow-slate-100 w-4 h-4 text-[0.65rem] leading-tight font-medium rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300`}>0</div>
             </a>
           </div>
           <div className="sm:hidden">

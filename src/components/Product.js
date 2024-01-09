@@ -16,9 +16,9 @@ const Product = () => {
           <p className="mt-2 ml-3 ">
             Luctus nec ullamcorper mattis, pulvinar dapibus leo.
           </p>
-          <Link to="/Cart">
-          <button className="bg-[#FC5F64] text-white hover:bg-[#75C32C] py-2 px-4 rounded-full cursor-pointer m-3">
-            ADD TO CART
+          <Link to="/">
+          <button className="text-[#FC5F64] hover:text-black cursor-pointer m-3">
+          see collection
           </button>
           </Link>
         </div>
@@ -32,9 +32,9 @@ const Product = () => {
           <p className="mt-2 ml-3 ">
             Luctus nec ullamcorper mattis, pulvinar dapibus leo.
           </p>
-          <Link to="/Cart">
-          <button className="bg-[#FC5F64] text-white hover:bg-[#75C32C] py-2 px-4 rounded-full cursor-pointer m-3">
-          ADD TO CART
+          <Link to="/">
+          <button className="text-[#FC5F64] hover:text-black cursor-pointer m-3">
+         see collection
           </button>
           </Link>
         </div>
@@ -46,9 +46,9 @@ const Product = () => {
           <p className="mt-2 ml-3 ">
             Luctus nec ullamcorper mattis, pulvinar dapibus leo.
           </p>
-          <Link to="/Cart">
-          <button className="bg-[#FC5F64] text-white hover:bg-[#75C32C] py-2 px-4 rounded-full cursor-pointer m-3">
-          ADD TO CART
+          <Link to="/">
+          <button className="text-[#FC5F64] hover:text-black cursor-pointer m-3">
+         VISIT THE STORE
           </button>
           </Link>
         </div>

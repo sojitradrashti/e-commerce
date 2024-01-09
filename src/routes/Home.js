@@ -1,22 +1,24 @@
 import React from 'react'
-import Banner from './Banner';
-
-import Plants from './Plants';
-import Product from './Product';
-import Help from './Help';
-import Testimonials from './Testimonials';
-import Shop from './Shop';
-import Footer from './Footer';
 import Navbar from '../components/Navbar';
+import Cart from '../components/Cart';
+import Banner from '../components/Banner';
+import Plants from '../components/Plants';
+import Product from '../components/Product';
+import Help from '../components/Help';
+import Testimonials from '../components/Testimonials';
+import Shop from '../components/Shop';
+import Footer from '../components/Footer';
+
 
 
 
 function Home() {
   return (
     <div>
-      <Navbar/>
+      <Cart />
+      <Navbar />
       <Banner/>
-       <Product/>
+      <Product/>
       <Plants/>
      <Help/>
      <Testimonials/>

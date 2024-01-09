@@ -3,18 +3,16 @@ import './App.css';
 import Navbar from './components/Navbar';
 import { Routes,Route } from 'react-router-dom';
 import Home from './routes/Home';
-import Cart from './routes/Cart';
+import Cart from './components/Cart';
 
 function App() {
   return (
     <>
     <div className='App'>
-      {/* <Navbar/> */}
-      
-    
+    <Cart/>
     <Routes>
       <Route path="/" element={<Home/>}/>
-     <Route path="/Cart" element={<Cart/>}/>
+   
     </Routes>
     
     </div>
