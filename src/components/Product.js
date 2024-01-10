@@ -3,6 +3,18 @@ import { Link } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa"
 const Product = () => {
+
+
+
+  const onAddToCart = () => [
+    {
+
+    }
+  ]
+
+
+
+
   return (
     <div className="bg-[#FAF9F8]">
     <div className="px-2  sm:px-8 ">

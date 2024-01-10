@@ -1,16 +1,24 @@
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import { FaBars, FaSearch } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { FaTimes } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { RiHeartFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
+import { setOpenCart } from "../app/CartSlice.js";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
+  }
+  const dispatch = useDispatch();
+  const onCartToggle = () => {
+    dispatch(setOpenCart({
+      cartState : true
+    }))
   }
   const navItems = [
     { title: "Home", path: "/home" },
@@ -44,7 +52,7 @@ const Navbar = () => {
               <RiHeartFill />
             </a>
 
-            <a href="/" className="flex items-center gap-2 outline-none relative">
+            <a onClick={onCartToggle} className="flex items-center gap-2 outline-none relative">
               <FaShoppingCart />
              <div className={`absolute top-2 right-0 bg-white text-slate-900 shadow shadow-slate-100 w-4 h-4 text-[0.65rem] leading-tight font-medium rounded-full flex items-center justify-center cursor-pointer hover:scale-110 transition-all duration-300`}>0</div>
             </a>

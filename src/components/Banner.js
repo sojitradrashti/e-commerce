@@ -37,7 +37,7 @@ function Banner () {
     pauseOnHover: false,
     pauseOnFocus: true,
   };
-
+  
   return (
     <>
     <div className="bg-[#FAF9F8]  relative overflow-hidden min-h-[100px] sm:min-h-[450px] justify-center items-center">
