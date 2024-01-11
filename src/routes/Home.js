@@ -1,31 +1,26 @@
-import React from 'react'
-import Navbar from '../components/Navbar';
-import Cart from '../components/Cart';
-import Banner from '../components/Banner';
-import Plants from '../components/Plants';
-import Product from '../components/Product';
-import Help from '../components/Help';
-import Testimonials from '../components/Testimonials';
-import Shop from '../components/Shop';
-import Footer from '../components/Footer';
+import React from "react";
+import Navbar from "../components/Navbar";
 
+import Banner from "../components/Banner";
+import Plants from "../components/Plants";
+import Product from "../components/Product";
+import Help from "../components/Help";
+import Testimonials from "../components/Testimonials";
+import Shop from "../components/Shop";
+import Footer from "../components/Footer";
 
-
-
-function Home() {
+function Home({ list, addToCart,cart }) {
   return (
     <div>
-      <Cart />
-      <Navbar />
-      <Banner/>
-      <Product/>
-      <Plants/>
-     <Help/>
-     <Testimonials/>
-     <Shop/>
-     <Footer/>
-     
+      <Navbar/>
+      <Banner />
+      <Product />
+      <Plants plants={list} addToCart={addToCart} cart={cart}/>
+      <Help />
+      <Testimonials />
+      <Shop />
+      <Footer />
     </div>
-  )
+  );
 }
-export default Home
+export default Home;

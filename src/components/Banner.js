@@ -44,7 +44,7 @@ function Banner () {
     <div className="pb-8 sm:pb-0">
       <Slider {...settings}>
         {ImageList.map((data) => (
-          <div>
+          <div key={data.id}>
             <div className=" grid grid-cols-1 sm:grid-cols-2 md:mt-[150px] mt-[80px]">
               <div className="flex flex-col  justify-center gap-4 pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1 relative z-10">
                 <h1 className="text-4xl sm:text-6xl lg:text-5xl  ml-8 font-bold ">
