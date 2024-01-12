@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 
-const Plants = ({ plants,addToCart }) => {
+const Plants = ({ plants,handleClick,addToCart}) => {
   return (
     <div className="bg-[#FAF9F8]">
       <div className="px-2  sm:px-8">
@@ -30,7 +30,7 @@ const Plants = ({ plants,addToCart }) => {
                   <div>
                     <Link to="/">
                       <button className="bg-[#FC5F64] text-white hover:bg-[#75C32C] py-2 px-4 rounded-full cursor-pointer mb-3">
-                        <FaShoppingCart onClick={() => addToCart(item)}/>
+                        <FaShoppingCart onClick={()=>handleClick(item)}/>
                       </button>
                     </Link>
                   </div>

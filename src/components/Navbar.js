@@ -8,7 +8,7 @@ import { RiHeartFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { setOpenCart } from "../app/CartSlice.js";
 
-const Navbar = ({size}) => {
+const Navbar = ({ size, addToCart }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -29,6 +29,7 @@ const Navbar = ({size}) => {
     { id: 4, title: "Contact Us", path: "/contactus" },
     { id: 5, title: "My Account", path: "/myaccount" },
   ];
+  console.log(size)
   return (
     <>
       <header className="max-w-screen-2xl xL:px:28 px-4 z-10 bg-[#FAF9F8] absolute top-0 right-0 left-0">
@@ -52,15 +53,13 @@ const Navbar = ({size}) => {
               <RiHeartFill />
             </a>
 
-            <a
+            <Link
               // onClick={onCartToggle}
               className="flex items-center gap-2 outline-none relative"
             >
               <FaShoppingCart />
-              <div>
-                <span className="bg-green-500 text-white w-4 h-5 rounded-full absolute -top-3 left-2 text-center leading-5 ">{size}</span>
-              </div>
-            </a>
+              <span className="bg-red-500 absolute text-white -top-2 left-0"> {size} </span>
+            </Link>
           </div>
           <div className="sm:hidden">
             <button onClick={toggleMenu}>
@@ -76,7 +75,7 @@ const Navbar = ({size}) => {
 
         <div className="pt-4">
           <ul className="lg:flex items-center justify-between text-black text-xl  hidden ">
-            {navItems.map(( data ) => (
+            {navItems.map((data) => (
               <li key={data.id} className="hover:text-green-500">
                 <Link to={data.path}>{data.title}</Link>
               </li>
