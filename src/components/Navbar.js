@@ -1,27 +1,18 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
 import { FaBars, FaSearch } from "react-icons/fa";
 import { FaUser } from "react-icons/fa";
 import { FaTimes } from "react-icons/fa";
 import { FaShoppingCart } from "react-icons/fa";
 import { RiHeartFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
-import { setOpenCart } from "../app/CartSlice.js";
 
-const Navbar = ({ size, addToCart }) => {
+const Navbar = ({ size,setShow}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-  // const dispatch = useDispatch();
-  // const onCartToggle = () => {
-  //   dispatch(
-  //     setOpenCart({
-  //       cartState: true,
-  //     })
-  //   );
-  // };
+
   const navItems = [
     { id: 1, title: "Home", path: "/home" },
     { id: 2, title: "Store", path: "/store" },
@@ -53,12 +44,11 @@ const Navbar = ({ size, addToCart }) => {
               <RiHeartFill />
             </a>
 
-            <Link
-              // onClick={onCartToggle}
+            <Link to="/Cart" 
               className="flex items-center gap-2 outline-none relative"
             >
               <FaShoppingCart />
-              <span className="bg-red-500 absolute text-white -top-2 left-0"> {size} </span>
+              <span className="bg-red-500 absolute h-4 rounded-full text-xs  px-1 text-white -top-2 left-2"> {size} </span>
             </Link>
           </div>
           <div className="sm:hidden">

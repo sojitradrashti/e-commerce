@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaRegHeart } from "react-icons/fa";
-import { FaShoppingCart } from "react-icons/fa"
+
 const Product = () => {
   return (
     <div className="bg-[#FAF9F8]">

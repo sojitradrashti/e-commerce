@@ -1,9 +1,7 @@
 import React from "react";
-import { FaShoppingBag } from "react-icons/fa";
 import Slider from "react-slick";
 import { Link } from "react-router-dom";
-// import "slick-carousel/slick/slick.css";
-// import "slick-carousel/slick/slick-theme.css";
+
 const ImageList = [
   {
     id: 1,
@@ -47,10 +45,10 @@ function Banner () {
           <div key={data.id}>
             <div className=" grid grid-cols-1 sm:grid-cols-2 md:mt-[150px] mt-[80px]">
               <div className="flex flex-col  justify-center gap-4 pt-12 sm:pt-0 text-center sm:text-left order-2 sm:order-1 relative z-10">
-                <h1 className="text-4xl sm:text-6xl lg:text-5xl  ml-8 font-bold ">
+                <h1 className="text-3xl sm:text-6xl lg:text-5xl  ml-8 font-bold ">
                   {data.title}
                 </h1>
-                <p className="text-xl ml-8 ">{data.description}</p>
+                <p className="text-sm ml-8 ">{data.description}</p>
                 <div>
                   <Link to="/Cart">
                   <button 

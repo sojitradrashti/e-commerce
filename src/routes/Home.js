@@ -1,5 +1,4 @@
 import React from "react";
-import Navbar from "../components/Navbar";
 import Banner from "../components/Banner";
 import Plants from "../components/Plants";
 import Product from "../components/Product";
@@ -8,13 +7,25 @@ import Testimonials from "../components/Testimonials";
 import Shop from "../components/Shop";
 import Footer from "../components/Footer";
 
-function Home({list,handleClick,addToCart}) {
+function Home({cart, setCart}) {
+  
+  const handleClick = (item) => {
+    let isPresent = false;
+    cart.forEach((Product) => {
+      if (item.id === Product.id) isPresent = true;
+    });
+    if (isPresent) {
+      return;
+    }
+    setCart([...cart, item]);
+  };
+
   return (
     <div>
-      <Navbar/>
+      
       <Banner />
       <Product />
-      <Plants plants={list} handleClick={handleClick} addToCart={addToCart}/>
+      <Plants handleClick={handleClick} />
       <Help />
       <Testimonials />
       <Shop />
