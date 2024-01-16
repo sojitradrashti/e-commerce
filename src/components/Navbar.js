@@ -6,7 +6,7 @@ import { FaShoppingCart } from "react-icons/fa";
 import { RiHeartFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
-const Navbar = ({ size,setShow}) => {
+const Navbar = ({ size}) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -44,7 +44,7 @@ const Navbar = ({ size,setShow}) => {
               <RiHeartFill />
             </a>
 
-            <Link to="/Cart" onClick={()=>setShow(false)}
+            <Link to="/Cart"
               className="flex items-center gap-2 outline-none relative"
             >
               <FaShoppingCart />
