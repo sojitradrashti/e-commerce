@@ -23,13 +23,13 @@ function Home({cart, setCart}) {
   return (
     <div>
       
-      <Banner />
-      <Product />
+      {/* <Banner />
+      <Product /> */}
       <Plants handleClick={handleClick} />
-      <Help />
+      {/* <Help />
       <Testimonials />
       <Shop />
-      <Footer />
+      <Footer /> */}
     </div>
   );
 }

@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { FaShoppingCart } from "react-icons/fa";
 
 
-const Plants = ({ plants,handleClick,addToCart}) => {
+const Plants = ({ item,handleClick}) => {
   
-  const lists =[
+  const lists = [
     {
       id: 1,
       img: "assets/j1.jpg",
@@ -13,7 +13,7 @@ const Plants = ({ plants,handleClick,addToCart}) => {
       name: "Boncellensis Secullant",
       rating: "/assets/Capture.png",
       price: 34,
-      amount: 1,
+      amount: 1
     },
     {
       id: 2,
@@ -22,7 +22,7 @@ const Plants = ({ plants,handleClick,addToCart}) => {
       name: "Cleistocactus",
       rating: "/assets/Capture.png",
       price: 25,
-      amount: 1,
+      amount: 1
     },
     {
       id: 3,
@@ -31,7 +31,7 @@ const Plants = ({ plants,handleClick,addToCart}) => {
       name: "Green Soil Lotus",
       rating: "/assets/Capture.png",
       price: 34,
-      amount: 1,
+      amount: 1
     },
     {
       id: 4,
@@ -40,7 +40,7 @@ const Plants = ({ plants,handleClick,addToCart}) => {
       name: "Money Plant",
       rating: "/assets/Capture.png",
       price: 20,
-      amount: 1,
+      amount: 1
     },
     {
       id: 5,
@@ -49,7 +49,7 @@ const Plants = ({ plants,handleClick,addToCart}) => {
       name: "Old Lady Cactus",
       rating: "/assets/Capture.png",
       price: 12,
-      amount: 1,
+      amount: 1
     },
     {
       id: 6,
@@ -58,7 +58,7 @@ const Plants = ({ plants,handleClick,addToCart}) => {
       name: "Piorro Quisquam",
       rating: "/assets/Capture.png",
       price: 32,
-      amount: 1,
+      amount: 1
     },
 
     {
@@ -68,7 +68,7 @@ const Plants = ({ plants,handleClick,addToCart}) => {
       name: "Rattle Snake Tail",
       rating: "/assets/Capture.png",
       price: 45,
-      amount: 1,
+      amount: 1
     },
     {
       id: 8,
@@ -77,11 +77,11 @@ const Plants = ({ plants,handleClick,addToCart}) => {
       name: "Star Cactus",
       rating: "/assets/Capture.png",
       price: 20,
-      amount: 1,
+      amount: 1
     },
-  ]
+  ];
 
-  const [id , img ,rating ,name , price ,amount ,type] = lists
+  const [id, img, rating, name, price, amount, type] = lists;
 
   return (
     <div className="bg-[#FAF9F8]">
@@ -93,13 +93,15 @@ const Plants = ({ plants,handleClick,addToCart}) => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
         <div className="mx-auto md:grid grid-cols-4 gap-5">
-          {lists.map((item ,index ) => (
+          {lists.map((item, index) => (
             <div key={item.id} className="shadow-2xl my-4">
               <div className="relative">
                 <button className="absolute m-3 px-3 p-1 rounded-2xl bg-white">
                   sale!
                 </button>
-                <img src={item.img} alt="image" />
+                <img 
+                src={item.img} 
+                alt="" />
               </div>
               <div className="bg-[#F9F9F9]">
                 <p className="text-[#B1B3B6] ml-2 ">{item.type}</p>

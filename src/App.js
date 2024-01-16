@@ -6,6 +6,7 @@ import Cart from "./routes/Cart";
 import { useState } from "react";
 
   const App = () => {
+    const [show,setShow] = useState(true);
     const [cart, setCart] = useState([]);
     const handleChange = (item , d) => {
       let ind = -1;
@@ -14,22 +15,21 @@ import { useState } from "react";
           ind = index;
       });
       const temArr = cart;
-      temArr[ind].amount += d;
-      if (temArr[ind].amount === 0)
-        temArr[ind].amount = 1;
+      temArr[ind] += d;
+      if (temArr[ind].amount === 0){
+        temArr[ind].amount = 1;}
       setCart([...temArr])
-    }
+    };
 
 
   return (
     <>
       <div className="App">
-        <Navbar size={cart.length} />
-        <Routes>
-        <Route path="/" element={<Home cart={cart} setCart={setCart}/>}/>
-        <Route path="/" element={<Cart cart={cart} setCart={setCart} handleChange={handleChange} />}/>
-        </Routes>
-      </div>
+      <Navbar size={cart.length} setShow={setShow}/>
+        {
+          show ? <Home cart={cart} setCart={setCart}/> : <Cart cart={cart} setCart={setCart} handleChange={handleChange} />
+        }
+        </div>
     </>
   );
 };

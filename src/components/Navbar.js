@@ -44,7 +44,7 @@ const Navbar = ({ size,setShow}) => {
               <RiHeartFill />
             </a>
 
-            <Link to="/Cart" 
+            <Link to="/Cart" onClick={()=>setShow(false)}
               className="flex items-center gap-2 outline-none relative"
             >
               <FaShoppingCart />

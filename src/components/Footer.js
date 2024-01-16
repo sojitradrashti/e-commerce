@@ -9,7 +9,7 @@ const Footer = () => {
     <div className="m-7 px-4">
       <div className="grid grid-cols-1 sm:grid-cols-4 gap-5">
         <div>
-          <img src="/assets/logo.png" />
+          <img src="/assets/logo.png"className="h-[200px] w-[200px]" />
           <h2 className="text-2xl font-bold">Simply Natural</h2>
           <div className="flex gap-3 ">
             <FaFacebookSquare size={30} className=" hover:bg-[#75C32C]" />
@@ -34,7 +34,7 @@ const Footer = () => {
         </div>
         <div>
           <h3 className="text-2xl font-bold">Get In Touch With Us For <br/> The Best Quality Plants & <br/> Succulents</h3>
-          <p className="text-xl hover:text-[#75C32C] cursor-pointer">
+          <p className="text-xl cursor-pointer">
             Qui dolore ipsum quia dolor sit amet, consec tetur adipisci velit,
             sed quia non numquam eius modi tempora incidunt lores ta porro ame.
           </p>
