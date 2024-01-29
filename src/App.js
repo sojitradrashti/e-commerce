@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./routes/Home";
 import Cart from "./routes/Cart";
 import Checkout from "./routes/Checkout";
+import AboutUs from "./components/AboutUs";
 import { useState } from "react";
   const App = () => {
 
@@ -43,7 +44,9 @@ import { useState } from "react";
         element={<Cart cart={cart}
         setCart={setCart}
       handleChange={handleChange}/>}/>
-      <Route path="/Checkout" element={<Checkout />}/>
+      <Route path="/Checkout" element={<Checkout cart={cart}
+        setCart={setCart} />}/>
+        <Route path="/aboutus" element={<AboutUs/>}/>
         </Routes>
        
         </div>

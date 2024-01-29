@@ -12,13 +12,13 @@ function Home({item,handleClick}) {
   return (
     <div>
       
-      {/* <Banner />
-      <Product /> */}
+      <Banner />
+      <Product />
       <Plants item={item} handleClick={handleClick} />
-      {/* <Help />
+      <Help />
       <Testimonials />
       <Shop />
-      <Footer /> */}
+      <Footer />
         
       
     </div>

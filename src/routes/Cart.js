@@ -20,39 +20,43 @@ const Cart = ({ cart, setCart, handleChange }) => {
   });
 
   return (
-    <div className="w-[90%] mx-auto mt-[190px]">
+    <div className="w-[100%] mt-[190px]">
       {cart.map((item, index) => (
         <div
           key={index}
-          className="flex items-center justify-between mt-[20px] pb-[5px] border border-black"
+          className="px-3 flex-row sm:flex col mx-5 items-center justify-between mt-4"
         >
-          <div className="flex w-[400px] items-center gap-3">
-            <img className="w-[100px] h-[90px] p-2" src={item.img} />
-            <p className="font-bold">{item.name}</p>
-          </div>
           <div>
+            <img className="w-[100px] h-[90px] " src={item.img} />
+            </div>
+            <div className="w-[150px]">
+              <p className="font-bold  xs:text-sm">{item.name}</p>
+          </div>
+          <div className="">
             <button
               onClick={() => handleChange(item, +1)}
-              className="w-[20px] bg-slate-300 border mr-2 border-gray-500"
+              className="w-6 bg-slate-300 border mr-2 border-gray-500"
             >
               +
             </button>
 
-            <button className="w-[20px] bg-slate-300 border mr-2 border-gray-500">
+            <button className="w-6 bg-slate-300 border mr-2 border-gray-500">
               {item.amount}
             </button>
             <button
               onClick={() => handleChange(item, -1)}
-              className="w-[20px] bg-slate-300 border mr-2 border-gray-500"
+              className="w-6 bg-slate-300 border mr-2 border-gray-500"
             >
               -
             </button>
           </div>
           <div className="flex">
             <span>{item.price}</span>
+            </div>
+            <div>
             <button
               onClick={() => handleRemove(item.id)}
-              className="px-2 text-white text-xl bg-red-400  hover:bg-lime-500 rounded-md cursor-pointer"
+              className="px-2 mr-2 text-white text-xl bg-red-400  hover:bg-lime-500 rounded-md cursor-pointer"
             >
               Remove
             </button>
@@ -60,8 +64,8 @@ const Cart = ({ cart, setCart, handleChange }) => {
         </div>
       ))}
       <br />
-
-      <div className="w-[30%] border border-black ml-auto">
+<div className="lg:w-[40%] sm:[20%]">
+      <div className=" border border-black ml-5 mr-7">
         <div className="border-b-2 border-black ">
           <h2 className="text-2xl m-3">Cart totals</h2>
           <hr />
@@ -72,17 +76,18 @@ const Cart = ({ cart, setCart, handleChange }) => {
         </div>
         <div className="flex justify-between border-b-2 p-2">
           <p>total</p>
-          <p>{price}</p>
+          <p>${price}</p>
         </div>
         <Link to="/Checkout">
-          <button className="px-7 p-3 text-white bg-red-500 hover:bg-lime-500 m-5 text-2xl rounded-full">
+          <button className="lg:px-3 md:px-2 p-3 text-white bg-red-500 hover:bg-lime-500 m-5 text-2xl rounded-full">
             PROCEED TO CHECKOUT
           </button>
         </Link>
       </div>
       <div className="text-center"></div>
     </div>
+    </div>
   );
 };
 
-export default Cart;
+export default Cart
