@@ -6,6 +6,8 @@ import Cart from "./routes/Cart";
 import Checkout from "./routes/Checkout";
 import AboutUs from "./components/AboutUs";
 import { useState } from "react";
+import ContactUs from "./components/ContactUs";
+import MyAccount from "./components/MyAccount";
   const App = () => {
 
     const [cart, setCart] = useState([]);
@@ -47,6 +49,8 @@ import { useState } from "react";
       <Route path="/Checkout" element={<Checkout cart={cart}
         setCart={setCart} />}/>
         <Route path="/aboutus" element={<AboutUs/>}/>
+        <Route path="/contactus" element={<ContactUs/>}/>
+        <Route path="/myaccount" element={<MyAccount/>}/>
         </Routes>
        
         </div>
