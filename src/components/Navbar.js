@@ -36,7 +36,7 @@ const Navbar = ({ size}) => {
             />
             <FaSearch className="text-black w-5 h-5 cursor-pointer hidden md:block" />
 
-            <a href="/" className="flex items-center  gap-2">
+            <a href="/" className="flex items-center gap-2">
               <FaUser />
             </a>
 
@@ -64,7 +64,7 @@ const Navbar = ({ size}) => {
         <hr />
 
         <div className="pt-4">
-          <ul className="lg:flex items-center justify-between text-black text-xl  hidden ">
+          <ul className="lg:flex items-center justify-between text-black text-xl hidden">
             {navItems.map((data) => (
               <li key={data.id} className="hover:text-green-500">
                 <Link to={data.path}>{data.title}</Link>
@@ -73,7 +73,7 @@ const Navbar = ({ size}) => {
           </ul>
         </div>
 
-        <div>
+        <div className="lg:hidden">
           <ul
             className={`bg-black text-white px-4 py-2 rounded ${
               isMenuOpen ? "" : "hidden"

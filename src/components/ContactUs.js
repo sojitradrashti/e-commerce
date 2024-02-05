@@ -2,6 +2,7 @@ import React from "react";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaPhone } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import Footer from "./Footer";
 
 const ContactUs = () => {
   return (
@@ -13,13 +14,13 @@ const ContactUs = () => {
             alt="image"
             className="lg:w-[100%] lg:h-[550px] sm:w-full rounded-b-3xl"
           />
-          <h1 className="absolute lg:text-6xl font-bold text-black top-1/2 left-0">
+          <h1 className="absolute lg:text-4xl font-bold text-black top-1/2 left-0">
             Contact Us
           </h1>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 px-4 mt-6 ">
-          <div className="px-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 px-4">
+          <div className="px-4 mt-6 ">
           <div>
             <h2 className="text-2xl font-semibold">Contact Details</h2>
           </div>
@@ -84,7 +85,7 @@ const ContactUs = () => {
                 placeholder="Message"
                 className="border border-black p-3 w-[100%]"
               />
-              <button className="p-3 text-white rounded-full bg-red-500 hover:bg-green-600 mb-3">
+              <button className="p-3 mt-4 text-white rounded-full bg-red-500 hover:bg-green-600 mb-3">
                 SEND MESSAGE
               </button>
             </div>
@@ -92,6 +93,7 @@ const ContactUs = () => {
         </div>
         </div>
       </div>
+      <Footer/>
     </div>
   );
 };
