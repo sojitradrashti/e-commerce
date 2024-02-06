@@ -32,12 +32,9 @@ const Plants = ({ item, handleClick }) => {
                       >
                         ADD TO CART
                       </button>
-                    </Link>
-                  </div>
-                  <div className="absolute top-1/2  w-full  mb-3 hidden group-hover:flex duration-200 h-full px-20 py-40">
-                    <Link>
+           
                       <button
-                        className="px-6 py-1 bg-slate-200 text-black font-semibold text-center hover:bg-white hover:text-black rounded-full cursor-pointer text-sm"
+                        className="px-12 py-1 mt-3  bg-slate-200 text-black font-semibold text-center hover:bg-white hover:text-black rounded-full cursor-pointer text-sm"
                       >
                         VIEW
                       </button>
