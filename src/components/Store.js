@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Categories from "./Categories";
 import Help from "./Help";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 
 const Store = () => {
   const [data, setData] = useState(Categories);
@@ -13,23 +14,23 @@ const Store = () => {
   };
   return (
     <div className="mt-40 ">
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 w-[100%] px-10">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 w-[100%] px-10 ">
         <button
-          className="hover:bg-green-500 shadow-xl border border-black rounded-full  text-black hover:text-white"
+          className="hover:bg-gray-200 bg-black shadow-xl border border-black rounded-full  text-white hover:text-black"
           onClick={() => setData(Categories)}
         >
           All
         </button>
 
         <button
-          className="hover:bg-green-500 rounded-full shadow-xl border border-black  text-black hover:text-white"
+          className="hover:bg-gray-200 bg-black shadow-xl border border-black rounded-full  text-white hover:text-black"
           onClick={() => filterResult("Plants")}
         >
           Plants
         </button>
 
         <button
-          className="hover:bg-green-500 rounded-full shadow-xl border border-black  text-black hover:text-white"
+          className="hover:bg-gray-200 bg-black shadow-xl border border-black rounded-full  text-white hover:text-black"
           onClick={() => filterResult("Cactus")}
         >
           Cactus
@@ -39,12 +40,14 @@ const Store = () => {
         {data?.map((item) => (
           <div key={item.id} className="lg:px-10 sm:px-4 ">
             <div>
-              <img
+            <Link to="/ProductDetails">
+              <img 
                 src={item.img}
                 alt="image"
+                
                 className="bg-slate-200 lg:w-[100%] h-[350px] sm:w-[500px] mt-5"
-              />
-              <p className="text-gray-400">{item.type}</p>
+              /></Link>
+              <p className="text-gray-500">{item.type}</p>
             </div>
 
             <div className="mt-2">

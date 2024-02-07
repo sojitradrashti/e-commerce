@@ -9,6 +9,9 @@ import { useState } from "react";
 import ContactUs from "./components/ContactUs";
 import MyAccount from "./components/MyAccount";
 import Store from "./components/Store";
+import Signup from "./components/Signup";
+import ProductDetails from "./components/ProductDetails";
+
 
   const App = () => {
 
@@ -54,7 +57,8 @@ import Store from "./components/Store";
         <Route path="/contactus" element={<ContactUs/>}/>
         <Route path="/myaccount" element={<MyAccount/>}/>
          <Route path="/store" element={<Store/>}/>
-         
+         <Route path="/Signup" element={<Signup/>}/>
+         <Route path="/productdetails" element={<ProductDetails/>}/>
         </Routes>
        
         </div>

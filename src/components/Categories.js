@@ -7,7 +7,12 @@ export const Categories = [
       title: "Aluminum Plant",
       rating: "/assets/Capture.png",
       price: 45,
+      description : {
+        p:"Pretium diam ornare! Architecto occaecati tempor aptent cum nesciunt dignissimos parturient a. Adipisicing placeat quibusdam. Pretium diam ornare! Architecto occaecati tempor aptent cum nesciunt."
+  
+      },
     },
+    
     {
       id: 2,
       img: "/assets/j10.png",

@@ -36,7 +36,7 @@ const Navbar = ({ size}) => {
             />
             <FaSearch className="text-black w-5 h-5 cursor-pointer hidden md:block" />
 
-            <a href="/" className="flex items-center gap-2">
+            <a href="/Signup" className="flex items-center gap-2">
               <FaUser />
             </a>
 

@@ -28,17 +28,19 @@ const Plants = ({ item, handleClick }) => {
                     <Link>
                       <button
                         onClick={() => handleClick(item)}
-                        className="px-6 py-1 bg-slate-200 text-black font-semibold text-center hover:bg-white hover:text-black rounded-full cursor-pointer text-sm"
+                        className="px-6 py-1 bg-slate-300 text-black font-semibold text-center hover:bg-white hover:text-black rounded-full cursor-pointer text-sm"
                       >
                         ADD TO CART
                       </button>
-           
+                   
+                      <Link to="/ProductDetails">
                       <button
-                        className="px-12 py-1 mt-3  bg-slate-200 text-black font-semibold text-center hover:bg-white hover:text-black rounded-full cursor-pointer text-sm"
+                        className="px-12 py-1 mt-3  bg-slate-300 text-black font-semibold text-center hover:bg-white hover:text-black rounded-full cursor-pointer text-sm"
                       >
                         VIEW
                       </button>
-                    </Link>
+                      </Link>
+                      </Link>
                   </div>
                 </div>
 
