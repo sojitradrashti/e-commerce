@@ -74,6 +74,8 @@ function Banner() {
             ))}
           </Slider>
         </div>
+      </div>
+
         <div className="px-10 mt-5 pb-5">
           <div className="flex flex-col sm:flex-row justify-between">
             {Logolist.map((item) => (
@@ -93,7 +95,6 @@ function Banner() {
             ))}
           </div>
         </div>
-      </div>
     </>
   );
 }
